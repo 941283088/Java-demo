@@ -13,12 +13,16 @@ public class MyThreeadShare extends Thread{
     @Override
     public void run()
     {
-        super.run();
-        while (count >0)
-        {
-            count -- ;
-            System.out.println("由" + this.currentThread().getName()+"计算,count="+count);
+        //super.run();
+        try {
+            while (count > 0) {
+                count--;
+                System.out.println("由" + this.currentThread().getName() + "计算,count=" + count);
 
+            }
+        }catch (Exception e)
+        {
+            e.printStackTrace();
         }
     }
 }
